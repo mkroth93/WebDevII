@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html id="hobbiesPage">
+<head>
+   <!--
+   About Me
+   Author: Michael Kroth
+   Class:  CIS 131 W01
+   Date:   8/19/19
+   -->
+   
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="AboutMe.css" />
+   <title>Michael Kroth</title>
+</head>
+<body>
+	<header>
+      <nav class="links">
+         <ul id="topLinks">
+            <li><a href="aboutMe.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="summer_vacation.html">Summer Vacation</a></li>
+         </ul>
+      </nav>
+    </header>
+	<div>
+		<h1>Hobbies</h1>
+	</div>
+	<article class="hobbies">
+		<section id="trail">
+			<h2>Nature Trail</h2>
+			<p>
+				Every now and then I enjoy going on a walk on the nature trail with my wife.
+			</p>
+		</section>
+		<section id="frisbee">
+			<h2>Frisbee</h2>
+			<p>Every week I attempt to go to the park to throw a frisbee around with friends.</p>
+		</section>
+		<section id="reading">
+			<h2>Reading</h2>
+			<p>
+				Every night I lay in bed and read. My favorite generes are Science Fiction and Horror. <br>
+				I am currently reading Stephen Kings IT.
+			</p>
+		</section>
+		<form id="favBook">
+					<fieldset>
+						<textarea rows="2" cols="35" placeholder="What is your favorite book?" required="required"></textarea>
+						<label for="favGenre">Favorite Genere?</label>
+						<select name="favGenre" required="required">
+							<option value=""></option>
+							<option value="SciFi">SciFi</option>
+							<option value="horror">Horror</option>
+							<option value="romance">Romance</option>
+							<option value="mystery">Mystery</option>
+							<option value="nonFiction">NonFiction</option>
+						</select><br />	
+						<input type="submit" value="Submit" id="btnSubmit">
+					</fieldset>
+				</form>
+	</article>
+	<footer>About Michael Kroth &copy 2019 Springfield,MO</footer>
+</body>
+</html>

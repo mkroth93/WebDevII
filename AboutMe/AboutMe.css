@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+   Author: Michael Kroth
+   Date:   8/19/19
+   
+   Filename: AboutMe.css
+
+*/
+
+html
+{
+	font-family: 'Ranga', cursive;
+	font-size: 14px;
+	height:100%;
+	background-color: tan;
+}
+
+
+h1
+{
+	font-family: "Courier New", sans-serif;
+	text-align: center;
+	font-size: 50pt;
+	text-shadow: 2px 2px 8px #FF0000;
+}
+
+article
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 25%;
+	padding-right: 25%;
+	text-align: center;
+}
+
+footer 
+{
+	text-align: center;
+	background-color: black;
+	color: white;
+	margin-top: 20%;
+}
+
+/* aboutMe styles */
+#homePage
+{
+	background-image: url("fence.jpeg");
+	background-size: cover;
+}
+
+#bitMe
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 30%;
+	width: 50%;
+}
+
+/* Navigation styles */
+#topLinks
+{
+	text-align: center;
+}
+
+#topLinks li 
+{
+   background-color: rgb(128, 173, 171);
+   display: inline;
+   font-size: 25px;
+   line-height: 30px;
+   height: 30px;
+   width: 192px;
+}
+
+#topLinks a 
+{
+   padding: 0 30px;
+   display: inline-block;
+   text-align: center;
+   text-decoration: none;
+}
+
+nav.links a:link, nav.links:visited 
+{
+   color: rgb(216, 194, 157);
+}
+
+nav.links a:hover, nav.links:active 
+{
+   background-color: rgb(130, 210, 245);
+}
+
+
+/* Hobbies Page Styles */
+#hobbiesPage
+{
+	background-image: url("nature.jpeg");
+	background-size: cover;
+}
+
+#trail p
+{
+	background-color: rgb(169, 252, 240, .3);
+	font-size: 15px;
+}
+
+#frisbee p
+{
+	background-color: rgb(255, 213, 122, .3);
+	font-size: 15px;
+}
+#reading p
+{
+	background-color: rgb(255, 129, 122, .3);
+	font-size: 15px;
+}
+
+
+form
+{
+	text-align:center;
+}
+
+fieldset 
+{
+   border: none;
+   margin:15px auto 15px auto;
+   width:100%;
+   padding: 0 0 0 0;
+}
+
+label
+{
+	display: block;
+	margin-right: 10px;
+	clear: left;
+}
+
+input, select
+{
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+/* Summer Page Styles */
+#summerPage
+{
+	background-image: url("brownCanvas.jpeg");
+	background-size: cover;
+}
+
+#summer p
+{
+	color: rgb(135, 247, 255);
+	font-size: 16px;
+	text-align: center;
+}
+
+
+#silverDollar
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
