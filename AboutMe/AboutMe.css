@@ -102,18 +102,18 @@ nav.links a:hover, nav.links:active
 
 #trail p
 {
-	background-color: rgb(169, 252, 240, .3);
+	text-shadow: 2px 2px 8px #018c78;
 	font-size: 15px;
 }
 
 #frisbee p
 {
-	background-color: rgb(255, 213, 122, .3);
+	text-shadow: 2px 2px 8px #c98a00;
 	font-size: 15px;
 }
 #reading p
 {
-	background-color: rgb(255, 129, 122, .3);
+	text-shadow: 2px 2px 8px #a30900;
 	font-size: 15px;
 }
 
