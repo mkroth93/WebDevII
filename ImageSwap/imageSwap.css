@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*
+   Author: Michael Kroth
+   Date:   8/19/19
+   
+   Filename: imageSwap.css
+
+*/
+
+
+img {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+  
+}
+
+#thumbnail img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;
+}
+
+#thumbnail{
+	margin: auto;
+	width: 75%;
+}
+
+#largePicture{
+	margin: auto;
+	width: 50%;
+	height: auto;
+}
+
+#largePicture img{
+	width: 300px;
+	height: auto;
+}
