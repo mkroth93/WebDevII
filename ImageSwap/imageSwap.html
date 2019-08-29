@@ -10,18 +10,17 @@
    
    <meta charset="utf-8" />
    <link rel="stylesheet" href="imageSwap.css" />
-   <script src="imageSwap.js"></script>
    <title>Image Swap</title>
 </head>
 <body>
-    <div id="largePicture">
+    <div id="largeContainer">
 		<img src="jack.jpg" id="largePic">
     </div>
 	<div id="thumbnail">
-		<img src="jack.jpg" alt="Jack" id="jackCard"/>
-		<img src="queen.png" alt="Queen" id="queenCard"/>
-		<img src="king.png" alt="King" id="kingCard"/>
-		<img src="ace.jpg" alt="Ace" id="aceCard"/>
+		<img onclick="getElementById('largePic').src='jack.jpg'" src="jack.jpg" alt="Jack" id="jackCard"/>
+		<img onclick="getElementById('largePic').src='queen.png'" src="queen.png" alt="Queen" id="queenCard"/>
+		<img onclick="getElementById('largePic').src='king.png'" src="king.png" alt="King" id="kingCard"/>
+		<img onclick="getElementById('largePic').src='ace.jpg'" src="ace.jpg" alt="Ace" id="aceCard"/>
 	</div>
 	<footer>Michael Kroth &copy 2019 Springfield,MO</footer>
 </body>

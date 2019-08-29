@@ -8,6 +8,9 @@
 
 */
 
+html{
+	background-color: #006113;
+}
 
 img {
   border: 1px solid #ddd; /* Gray border */
@@ -23,18 +26,20 @@ img {
   border-radius: 4px;
 }
 
-#thumbnail{
+#largeContainer{
 	margin: auto;
 	width: 75%;
 }
 
-#largePicture{
+#largePic{
 	margin: auto;
-	width: 50%;
-	height: auto;
+	width: 300px;
 }
 
-#largePicture img{
-	width: 300px;
-	height: auto;
+footer{
+	margin-top: 30px;
+	color: white;
 }
+
+
+
