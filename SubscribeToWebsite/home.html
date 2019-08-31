@@ -38,15 +38,25 @@
 					<option>Facebook</option>
 					<option>Skype</option>
 				</select>
-			<button onclick="displayInfo()" type="submit" class="btn btn-primary">Subscribe</button>
+			<button onclick="displayInfo()" type="button" class="btn btn-primary" id="subscribe">Subscribe</button>
 		</form>
-		<div>
-			<p id="selections">Your selections will be displayed here</p>
+		<div id="selections" class="invisible">
+			<input id="fNameSelection" type="text" class="form-control" readonly />
+			<input id="lNameSelection" type="text" class="form-control" readonly />
+			<input id="contactSelection" type="text" class="form-control" readonly />
 		</div>
 	</div>
-	<script>
+	<script>	
 		function displayInfo() {
-			document.getElementById("selections").innerHTML = "YOU CLICKED ME!";
+			var fName = document.getElementById("firstName").value;
+			var lName = document.getElementById("lastName").value;
+			var contact = document.getElementById("contact").value;
+			
+			document.getElementById("fNameSelection").value = fName;
+			document.getElementById("lNameSelection").value = lName;
+			document.getElementById("contactSelection").value = contact;
+			
+			document.getElementById("selections").className = "visible";
 		}
 	</script>
 </body>
