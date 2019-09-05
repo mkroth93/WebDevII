@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+   Image Swapping 2.0
+   Author: Michael Kroth
+   Class:  CIS 131 W01
+   Date:   9/4/19
+   -->
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="imageSwap.css" />
+    <script src="scripts.js" defer></script>
+    <title>Image Swap</title>
+</head>
+
+<body>
+    <div id="largeContainer">
+        <img src="jack.jpg" id="largePic" alt="larger picture">
+    </div>
+    <div id="thumbnail">
+        <img onclick="swapImage(this.src)" src="jack.jpg" alt="Jack" id="thumbOne" />
+        <img onclick="swapImage(this.src)" src="queen.png" alt="Queen" id="thumbTwo" />
+        <img onclick="swapImage(this.src)" src="king.png" alt="King" id="thumbThree" />
+        <img onclick="swapImage(this.src)" src="ace.jpg" alt="Ace" id="thumbFour" />
+    </div>
+    <footer>Michael Kroth &copy; 2019 Springfield,MO</footer>
+</body>
+
+</html>
