@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*
+   Author: Michael Kroth
+   Date:   9/16/19
+*/
+
+html {
+    background-image: url("images/confetti.jpg");
+    background-size: cover;
+}
+
+body {
+    background: transparent;
+}
+
+.jumbotron {
+    background: transparent;
+}

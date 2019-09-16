@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="modernizr.custom.05819.js" rel="case">
+    <title>Gallery Page</title>
+  </head>
+  <body class="bg-info">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid bg-success">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+              <ul class="nav navbar-nav bg-info">
+                <li><a href="James.html">Home</a></li>
+                <li class="active"><a href="taylor.html">Gallery</a></li>
+                <li><a href="Michael.html">Purchase</a></li>
+                <li><a href="Zachary.html">About</a></li>
+              </ul>
+        </div>
+        <div class="container-fluid bg-gray">
+          <h1 class="text-center">Try our Image Gallery</h1>
+        </div>
+        <div class="container-fluid bg-info">
+          <br><br><br>
+          <img src="try.jpg" alt="ugh" class="mx-auto d-block center-block border border-warning" style=" width: 50%; height:40%;" id="mainPic">
+        </div>
+        <div class="container-fluid bg-info"><br><br><br>
+          <img src="try.jpg" alt="try" class="w-25 p-3" onclick="getElementById('mainPic').src = 'try.jpg'" style="max-width:24%; padding: 2px;">
+          <img src="wut.jpg" alt="wut" class="w-25 p-3" onclick="getElementById('mainPic').src = 'wut.jpg'" style="max-width:24%; padding: 2px;">
+          <img src="muffin.jpg" alt="muffin" class="w-25 p-3" onclick="getElementById('mainPic').src = 'muffin.jpg'" style="max-width:24%; padding: 2px;">
+          <img src="thumbsUp.jpg" alt="thumbsUp" class="w-25 p-3" onclick="getElementById('mainPic').src = 'thumbsUp.jpg'" style="max-width:24%; padding: 2px;">
+        </div>
+    </nav>
+
+  </body>
+</html>
