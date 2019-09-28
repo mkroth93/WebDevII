@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/*
+   Author: Michael Kroth
+   Date:   9/16/19
+*/
+
+body {
+    background: transparent;
+}
+
+.jumbotron {
+    background: transparent;
+}
+
+#homePage {
+    background-image: url("images/landscape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#supermanLane {
+    height: 25%;
+    width: 100%;
+}
+
+#flashLane {
+    padding-top: 18%;
+    height: 25%;
+    width: 100%;
+}

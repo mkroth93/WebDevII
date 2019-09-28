@@ -25,6 +25,9 @@
             <h1 class="bg-danger"><img src="images/pizza.png" width="100" height="100" class="d-inline-block align-top" alt="pizza">Cheech's Pizza </h1>
         </div>
     </div>
+    <div class="container text-center">
+        <h3>All pizzas are $10!!</h3>
+    </div>
     <form class="form-inline text-center">
         <div class="form-group">
             <input type="text" class="form-control" id="name" placeholder="Name" />
@@ -42,9 +45,16 @@
                 <!--Script will fill options-->
             </select>
         </div>
-        <button onclick="displayInfo()" type="button" class="btn btn-success" id="order">Order</button>
+        <button type="button" class="btn btn-success" id="order">Order</button>
     </form>
-    <p id="info"></p>
+    <div id="info" class="container text-center text-white">
+        <p id="nameInput"></p>
+        <p id="phoneInput"></p>
+        <p id="numInput"></p>
+        <p id="subTotal"></p>
+        <p id="tax"></p>
+        <p id="total"></p>
+    </div>
 </body>
 
 </html>

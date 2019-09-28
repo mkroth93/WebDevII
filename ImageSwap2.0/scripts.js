@@ -19,7 +19,7 @@ displayThumbnail(highCards); // starting images
 // This function will loop through the array of images and display it in the thumbnail
 function displayThumbnail(cards) {
     count = 0;
-    document.getElementById('thumbnail').innerHTML = "";
+    document.getElementById('thumbnail').innerHTML = ""; // clears div
     for (card of cards) {
         var img = document.createElement("img");
         img.src = card;

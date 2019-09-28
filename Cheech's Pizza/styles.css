@@ -5,15 +5,19 @@
    Date:   9/16/19
 */
 
-html {
-    background-image: url("images/confetti.jpg");
-    background-size: cover;
-}
-
 body {
     background: transparent;
 }
 
 .jumbotron {
     background: transparent;
+}
+
+#info {
+    margin-top: 5%;
+    font-size: 32pt
+}
+
+#total {
+    color: rgb(8, 255, 8);
 }
