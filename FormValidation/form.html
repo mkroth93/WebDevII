@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Midterm: Form Validation
+        Author: Michael Kroth
+        Class:  CIS 131 W01
+        Date:   9/29/19
+        -->
+
+    <meta charset="utf-8" />
+    <title>Form Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-primary">
+    <div class="container text-success">
+        <div class="jumbotron text-center">
+            <h1>Form Validation Practice</h1>
+        </div>
+    </div>
+    <div class="container text-center">
+        <form class="text-center" action="thankyou.html">
+            <div class="form-group row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="text" class="form-control text-center" name="name" placeholder="Name" />
+                    <span id="nameError" style="display: none">Name must be 6 or more characters</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="tel" class="form-control text-center" name="phone" placeholder="e.g. 999-999-9999" />
+                    <span id="phoneError" style="display: none">Enter valid Number</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input type="email" class="form-control text-center" name="email" placeholder="name@example.com" />
+                    <span id="emailError" style="display: none">Enter valid Email</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4 col-md-offset-4" id="genderSelect">
+                    <input type="radio" name="gender" value="male" class="radio-inline"> Male
+                    <input type="radio" name="gender" value="female" class="radio-inline"> Female
+                </div>
+            </div>
+            <div class="form-group row">
+                <select class="col-md-4 col-md-offset-4 text-info" name="favHero">
+                    <option disabled selected value>Favorite Superhero?</option>
+                    <option value="Batman">Batman</option>
+                    <option value="Superman">Superman</option>
+                    <option value="Wonder Woman">Wonder Woman</option>
+                    <option value="Flash">Flash</option>
+                    <option value="Ironman">Ironman</option>
+                    <option value="Captain America">Captain America</option>
+                    <option value="Spider-Man">Spider-Man</option>
+                    <option value="Thor">Thor</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <button type="submit" onclick=" return validate(this.form)" value="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <div id="warningMessage" style="display: none">
+            <p>required fields are missing</p>
+        </div>
+    </div>
+</body>
+
+</html>
