@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: bisque;">
+
+<head>
+    <!--
+        Title:  Tv Shows
+        Author: Michael Kroth
+        Class:  CIS 131 W01
+        Date:   11/07/19
+        -->
+
+    <meta charset="utf-8" />
+    <title>Popular Tv Shows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>Poplular Tv Shows</h1>
+    </div>
+    <div id="app">
+        <div>
+            <div class="card col-lg-6" v-for="show in shows.slice(0, 4)">
+                <img class="card-img-top col-lg-3 text-left" v-bind:src="getImage(show)">
+                <div>
+                    <h2 class="card-header text-left col-lg-3">{{show.original_name}}</h2>
+                    <h4 class="card-subtitle text-left col-lg-3" v-html="getDate(show)"></h4>
+                    <h4 class="card-subtitle text-left col-lg-3" v-html="getRating(show)"></h4>
+                </div>
+                <div class="card-body col-lg-8 text-center h-25">
+                    <p class="card-text" style="font: 22px geneva;">{{show.overview}}</p>
+                    <button type="button" class="btn btn-danger">Reviews</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                shows: [],
+                reviews: []
+            },
+
+            mounted() {
+                $.ajax("https://api.themoviedb.org/3/tv/popular?api_key=97896d0994e397395bead17e1a768ddb&language=en-US&page=1").then(result => {
+                    this.shows = result.results;
+                }, error => {
+                    console.log(error);
+                });
+
+            },
+            methods: {
+                getImage(show) {
+                    var image = 'https://image.tmdb.org/t/p/w200' + show.poster_path;
+                    return image;
+                },
+                getDate(show) {
+                    var date = new Date(show.first_air_date);
+                    var month = date.toLocaleString('default', {
+                        month: 'long'
+                    });
+                    var day = date.getDate() + 1;
+                    var year = date.getFullYear();
+                    var d = month + ' ' + day + ', ' + year;
+                    return d;
+                },
+                getRating(show) {
+                    rating = show.vote_average * 10;
+                    return "Rating: " + rating + "%";
+                },
+            }
+
+        })
+    </script>
+</body>
+
+</html>

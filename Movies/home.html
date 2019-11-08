@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: bisque;">
+
+<head>
+    <!--
+        Title:  Movies
+        Author: Michael Kroth
+        Class:  CIS 131 W01
+        Date:   11/03/19
+        -->
+
+    <meta charset="utf-8" />
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script>
+        $(document).ready(() => {
+            $.ajax({
+                url: "https://api.themoviedb.org/3/movie/now_playing?api_key=97896d0994e397395bead17e1a768ddb&language=en-US&page=1",
+                success: function(result) {
+                    for (var i = 0; i < 4; i++) {
+                        var h1 = document.createElement('h1');
+                        var img = document.createElement('img');
+                        var p = document.createElement('p');
+                        h1.innerHTML = result.results[i].original_title;
+                        h1.id = 'title' + i;
+                        h1.style = 'cursor: pointer; font: 3em cursive;'; //styled the header of each movie
+                        img.src = 'https://image.tmdb.org/t/p/w200' + result.results[i].poster_path;
+                        img.id = 'poster' + i;
+                        p.innerHTML = result.results[i].overview;
+                        p.id = "overview" + i;
+                        p.style = "font: 2em cursive";
+                        $(p).toggle();
+                        $("#movie" + i).append(h1);
+                        $("#movie" + i).append(img);
+                        $("#movie" + i).append(p);
+                        $(h1).hover(function() { //experimented around and figured out how to change text color on mouse hover
+                            $(this).css("color", "blue");
+                        }, function() {
+                            $(this).css("color", "initial");
+                        })
+                    }
+                    $(document).delegate('h1', 'click', function(event) { //toggles the image and paragraph
+                        var id = "#" + event.target.id;
+                        $(id).parent().children('img').toggle(1000);
+                        $(id).parent().children('p').toggle(1000);
+                    })
+
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="col-lg-6 text-center">
+        <div id="movie0"></div>
+        <div id="movie1"></div>
+    </div>
+    <div class="col-lg-6 text-center">
+        <div id="movie2"></div>
+        <div id="movie3"></div>
+    </div>
+
+</body>
+
+</html>
