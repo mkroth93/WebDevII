@@ -1,9 +1,21 @@
 .card {
     width: 50%;
-    background-color: transparent;
+    background-color: rgb(40, 44, 44);
+    padding-bottom: 2%;
     float: left;
 }
 
 .card-subtitle {
     margin-top: .2rem;
+    color: goldenrod;
+}
+
+.card-title {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+#overview {
+    font: 22px geneva;
+    color: honeydew;
 }

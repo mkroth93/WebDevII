@@ -1,14 +1,14 @@
 <div>
     <div class="card col-lg-6" *ngFor="let movie of movies">
         <div class="card-body">
-            <h2 class="card-title d-inline-block" style="font-weight: bold;">{{movie.name}}</h2>
+            <h2 class="card-title d-inline-block">{{movie.name}}</h2>
             <h4 class="card-subtitle d-inline-block float-right margin-top">{{movie.airDate}}</h4>
         </div>
         <div class="card-img-top d-flex align-items-center">
             <div>
                 <img src="{{movie.posterPath}}" class="img-fluid" style="margin-bottom: 2%;">
             </div>
-            <p class="overview-auto col p-2 m-0" style="font: 22px geneva;">{{movie.overview}}</p>
+            <p class="overview-auto col p-2 m-0" id="overview">{{movie.overview}}</p>
         </div>
     </div>
 </div>
