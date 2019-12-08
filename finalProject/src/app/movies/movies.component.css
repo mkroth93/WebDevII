@@ -1,0 +1,9 @@
+.card {
+    width: 50%;
+    background-color: transparent;
+    float: left;
+}
+
+.card-subtitle {
+    margin-top: .2rem;
+}

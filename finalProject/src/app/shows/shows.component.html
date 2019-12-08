@@ -1,0 +1,14 @@
+<div>
+    <div class="card col-lg-6" *ngFor="let show of shows">
+        <div class="card-body">
+            <h2 class="card-title d-inline-block" style="font-weight: bold;">{{show.name}}</h2>
+            <h4 class="card-subtitle d-inline-block float-right margin-top">{{show.airDate}}</h4>
+        </div>
+        <div class="card-img-top d-flex align-items-center">
+            <div>
+                <img src="{{show.posterPath}}" class="img-fluid" style="margin-bottom: 2%;">
+            </div>
+            <p class="overview-auto col p-2 m-0" style="font: 22px geneva;">{{show.overview}}</p>
+        </div>
+    </div>
+</div>
