@@ -3,6 +3,7 @@
     background-color: rgb(40, 44, 44);
     padding-bottom: 2%;
     float: left;
+    border-width: 2px;
 }
 
 .card-subtitle {

@@ -4,7 +4,7 @@
             <h5 class="card-title text-center">Movies</h5>
             <p class="card-text text-center">Display movies that are currently playing in theaters.</p>
             <a [routerLink]="['/movies']">
-                <img src="assets/images/movie.jpg" class="card-img-bottom" alt="Movies">
+                <img src="{{topMovieUrl}}" class="card-img-bottom" alt="Movies">
             </a>
         </div>
     </div>
@@ -13,7 +13,7 @@
             <h5 class="card-title text-center">Tv Shows</h5>
             <p class="card-text text-center">Display current tv shows that are popular right now.</p>
             <a [routerLink]="['/shows']">
-                <img src="assets/images/shows.jpg" class="card-img-bottom" alt="Shows">
+                <img src="{{topShowUrl}}" class="card-img-bottom" alt="Shows">
             </a>
         </div>
     </div>

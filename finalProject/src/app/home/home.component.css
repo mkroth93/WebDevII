@@ -9,3 +9,8 @@
     font-size: 26px;
     font-weight: bold;
 }
+
+.card-img-bottom {
+    width: 25%;
+    margin-left: 37%;
+}

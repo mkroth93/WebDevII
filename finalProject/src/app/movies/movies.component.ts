@@ -10,8 +10,8 @@ import { MoviesServices } from './movies.service';
 
 export class MoviesComponent{
     movies: IMovies[] = [];
-    constructor(private showsService: MoviesServices){
-        this.showsService.getShows().subscribe(moviesObserved => {
+    constructor(private moviesService: MoviesServices){
+        this.moviesService.getShows().subscribe(moviesObserved => {
             this.movies = moviesObserved["results"];
             this.movies.forEach(element => {
                 var temp = element["poster_path"];
